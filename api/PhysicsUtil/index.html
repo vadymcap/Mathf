@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">PhysicsUtil | Mathf</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://vadymcap.github.io/Mathf/api/PhysicsUtil"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="PhysicsUtil | Mathf"><link data-rh="true" rel="canonical" href="https://vadymcap.github.io/Mathf/api/PhysicsUtil"><link data-rh="true" rel="alternate" href="https://vadymcap.github.io/Mathf/api/PhysicsUtil" hreflang="en"><link data-rh="true" rel="alternate" href="https://vadymcap.github.io/Mathf/api/PhysicsUtil" hreflang="x-default"><link rel="stylesheet" href="/Mathf/assets/css/styles.cac6e50e.css">
+<script src="/Mathf/assets/js/runtime~main.e4867ba5.js" defer="defer"></script>
+<script src="/Mathf/assets/js/main.67b30406.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();null!==e?t(e):window.matchMedia("(prefers-color-scheme: dark)").matches?t("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,t("light"))}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Mathf/"><b class="navbar__title text--truncate">Mathf</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Mathf/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/vadymcap/Mathf" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Mathf/api/BezierFactory">​Bezier​Factory</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Mathf/api/ExperienceCalculator">​Experience​Calculator</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Mathf/api/Mathf">​Mathf</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/Mathf/api/PhysicsUtil">​Physics​Util</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Physics</span><span style="display:inline-block">Util</span></h1><div class="luaClassTags_EipM"></div><div></div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SetWaterDensity"><code style="text-decoration:none">SetWaterDensity</code><a href="#SetWaterDensity" class="hash-link" aria-label="Direct link to SetWaterDensity" title="Direct link to SetWaterDensity">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L23"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">SetWaterDensity</code><code>(</code><code>newDensity<!-- -->: </code><code class="blue_P4bS">number</code><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Standard water density constant used for buoyancy calculations.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Default value: 1 (mass/volume)</li>
+  <li>Can be modified for different liquid densities</li>
+  <li>Used in EstimateBuoyancyContribution calculations</li>
+  <li>Real water density is ~1000 kg/m³, this is simplified for Roblox</li>
+</ul>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetConnectedParts"><code style="text-decoration:none">GetConnectedParts</code><a href="#GetConnectedParts" class="hash-link" aria-label="Direct link to GetConnectedParts" title="Direct link to GetConnectedParts">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L47"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">GetConnectedParts</code><code>(</code><div class="inset_uKQm"><div><code>part<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The part to get connections from</p>
+</span></span></div></div><code>) → </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Array containing all connected parts plus the original part</p>
+</span></span></div><div>
+<p>Retrieves all connected parts of a part, including the part itself.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Uses recursive connection detection</li>
+  <li>Includes the original part in returned array</li>
+  <li>Works with welded, hinged, and constraint-connected parts</li>
+  <li>Useful for calculating properties of entire assemblies</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> car <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Vehicle<span class="token punctuation">.</span>Chassis
+<span class="token keyword">local</span> allParts <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">GetConnectedParts</span><span class="token punctuation">(</span>car<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Vehicle has"</span><span class="token punctuation">,</span> <span class="token operator">#</span>allParts<span class="token punctuation">,</span> <span class="token string">"parts"</span><span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="EstimateBuoyancyContribution"><code style="text-decoration:none">EstimateBuoyancyContribution</code><a href="#EstimateBuoyancyContribution" class="hash-link" aria-label="Direct link to EstimateBuoyancyContribution" title="Direct link to EstimateBuoyancyContribution">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L81"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">EstimateBuoyancyContribution</code><code>(</code><div class="inset_uKQm"><div><code>parts<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Array of parts to calculate buoyancy for</p>
+</span></span></div></div><code>) → </code><code>(</code><div class="inset_uKQm"><div><code class="blue_P4bS">number</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Total buoyancy force (positive = float, negative = sink)</p>
+</span></span></div><div><code class="blue_P4bS">number</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Total mass of all parts</p>
+</span></span></div><div><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Total volume of collidable parts</p>
+</span></span></div></div><code>)</code></div><div>
+<p>Estimates the total buoyancy force contributed by a collection of parts.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Only CanCollide parts contribute to buoyancy displacement</li>
+  <li>Returns negative values if object would sink</li>
+  <li>Positive values indicate floating capability</li>
+  <li>Uses workspace gravity for calculations</li>
+  <li>Assumes parts are fully submerged</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> boat <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Boat
+<span class="token keyword">local</span> parts <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">GetConnectedParts</span><span class="token punctuation">(</span>boat<span class="token punctuation">.</span>Hull<span class="token punctuation">)</span>
+<span class="token keyword">local</span> buoyancy<span class="token punctuation">,</span> mass<span class="token punctuation">,</span> volume <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">EstimateBuoyancyContribution</span><span class="token punctuation">(</span>parts<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> buoyancy <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">then</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Boat will float!"</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+	<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Boat will sink!"</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetCenterOfMass"><code style="text-decoration:none">GetCenterOfMass</code><a href="#GetCenterOfMass" class="hash-link" aria-label="Direct link to GetCenterOfMass" title="Direct link to GetCenterOfMass">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L130"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">GetCenterOfMass</code><code>(</code><div class="inset_uKQm"><div><code>parts<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Array of parts to calculate center of mass for</p>
+</span></span></div></div><code>) → </code><code>(</code><div class="inset_uKQm"><div><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>World position of center of mass</p>
+</span></span></div><div><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Total mass of all parts</p>
+</span></span></div></div><code>)</code></div><div>
+<p>Calculates the world-space center of mass for a collection of parts.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Returns weighted average position based on part masses</li>
+  <li>Essential for realistic physics simulation</li>
+  <li>Used as pivot point for rotational physics</li>
+  <li>More accurate than using geometric center</li>
+  <li>Works with any collection of parts</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> vehicle <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Car
+<span class="token keyword">local</span> parts <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">GetConnectedParts</span><span class="token punctuation">(</span>vehicle<span class="token punctuation">.</span>Chassis<span class="token punctuation">)</span>
+<span class="token keyword">local</span> centerOfMass<span class="token punctuation">,</span> totalMass <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">GetCenterOfMass</span><span class="token punctuation">(</span>parts<span class="token punctuation">)</span>
+
+<span class="token comment">-- Visualize center of mass</span>
+<span class="token keyword">local</span> sphere <span class="token operator">=</span> Instance<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token string">"Part"</span><span class="token punctuation">)</span>
+sphere<span class="token punctuation">.</span>Shape <span class="token operator">=</span> Enum<span class="token punctuation">.</span>PartType<span class="token punctuation">.</span>Ball
+sphere<span class="token punctuation">.</span>Size <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+sphere<span class="token punctuation">.</span>Position <span class="token operator">=</span> centerOfMass
+sphere<span class="token punctuation">.</span>Anchored <span class="token operator">=</span> <span class="token keyword">true</span>
+sphere<span class="token punctuation">.</span>Parent <span class="token operator">=</span> workspace
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="MomentOfInertia"><code style="text-decoration:none">MomentOfInertia</code><a href="#MomentOfInertia" class="hash-link" aria-label="Direct link to MomentOfInertia" title="Direct link to MomentOfInertia">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L166"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">MomentOfInertia</code><code>(</code><div class="inset_uKQm"><div><code>part<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The part to calculate inertia for</p>
+</span></span></div><div><code>axis<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Axis of rotation (does not need to be unit vector)</p>
+</span></span></div><div><code>origin<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>Origin point of the rotation axis</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Moment of inertia around the specified axis</p>
+</span></span></div><div>
+<p>Calculates the moment of inertia of a cuboid part around a given axis.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Moment of inertia represents resistance to rotational acceleration</li>
+  <li>Higher values mean harder to rotate</li>
+  <li>Takes into account both part shape and position relative to axis</li>
+  <li>Uses parallel axis theorem for offset calculation</li>
+  <li>Essential for realistic torque simulation</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> part <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Wheel
+<span class="token keyword">local</span> axis <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">-- Rotation around Y axis</span>
+<span class="token keyword">local</span> origin <span class="token operator">=</span> part<span class="token punctuation">.</span>Position
+<span class="token keyword">local</span> inertia <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">MomentOfInertia</span><span class="token punctuation">(</span>part<span class="token punctuation">,</span> axis<span class="token punctuation">,</span> origin<span class="token punctuation">)</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Rotational inertia:"</span><span class="token punctuation">,</span> inertia<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="BodyMomentOfInertia"><code style="text-decoration:none">BodyMomentOfInertia</code><a href="#BodyMomentOfInertia" class="hash-link" aria-label="Direct link to BodyMomentOfInertia" title="Direct link to BodyMomentOfInertia">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L203"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">BodyMomentOfInertia</code><code>(</code><div class="inset_uKQm"><div><code>parts<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Array of connected parts</p>
+</span></span></div><div><code>axis<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Rotation axis (typically torque vector)</p>
+</span></span></div><div><code>origin<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>Origin of rotation (typically center of mass)</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Total moment of inertia for the entire body</p>
+</span></span></div><div>
+<p>Calculates the total moment of inertia for a connected body of parts.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Sums individual part inertias for entire assembly</li>
+  <li>Axis should be the torque vector or (offset × force)</li>
+  <li>Origin should be the center of mass of the assembly</li>
+  <li>Used for calculating angular acceleration from torque</li>
+  <li>Essential for multi-part physics simulation</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">local</span> robot <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Robot
+<span class="token keyword">local</span> parts <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">GetConnectedParts</span><span class="token punctuation">(</span>robot<span class="token punctuation">.</span>Torso<span class="token punctuation">)</span>
+<span class="token keyword">local</span> com<span class="token punctuation">,</span> mass <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">GetCenterOfMass</span><span class="token punctuation">(</span>parts<span class="token punctuation">)</span>
+<span class="token keyword">local</span> torque <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">-- Spin torque</span>
+<span class="token keyword">local</span> inertia <span class="token operator">=</span> PhysicsUtil<span class="token punctuation">.</span><span class="token function">BodyMomentOfInertia</span><span class="token punctuation">(</span>parts<span class="token punctuation">,</span> torque<span class="token punctuation">,</span> com<span class="token punctuation">)</span>
+<span class="token keyword">local</span> angularAccel <span class="token operator">=</span> torque <span class="token operator">/</span> inertia
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ApplyForce"><code style="text-decoration:none">ApplyForce</code><a href="#ApplyForce" class="hash-link" aria-label="Direct link to ApplyForce" title="Direct link to ApplyForce">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L247"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">ApplyForce</code><code>(</code><div class="inset_uKQm"><div><code>part<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The part to apply force to (can be any part in assembly)</p>
+</span></span></div><div><code>force<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Force vector to apply (in studs * mass / second²)</p>
+</span></span></div><div><code>forcePosition<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>World position where force is applied (defaults to part.Position)</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Applies a force to a Roblox physics body at a specific position.</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Automatically calculates both linear and angular acceleration</li>
+  <li>Uses Newton's laws and rotational dynamics</li>
+  <li>Works on entire connected assembly, not just one part</li>
+  <li>Force position determines torque magnitude and direction</li>
+  <li>Modifies both Velocity and RotVelocity properties</li>
+  <li>Setting velocity on one part affects entire connected body in Roblox</li>
+</ul>
+<p><strong>Physics Details:</strong></p>
+<ul>
+  <li>Linear acceleration = Force / Mass</li>
+  <li>Torque = Offset × Force</li>
+  <li>Angular acceleration = Torque / Moment of Inertia</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token comment">-- Apply explosion force to a part</span>
+<span class="token keyword">local</span> part <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Crate
+<span class="token keyword">local</span> explosionPos <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">local</span> force <span class="token operator">=</span> <span class="token punctuation">(</span>part<span class="token punctuation">.</span>Position <span class="token operator">-</span> explosionPos<span class="token punctuation">)</span><span class="token punctuation">.</span>Unit <span class="token operator">*</span> <span class="token number">1000</span>
+PhysicsUtil<span class="token punctuation">.</span><span class="token function">ApplyForce</span><span class="token punctuation">(</span>part<span class="token punctuation">,</span> force<span class="token punctuation">,</span> part<span class="token punctuation">.</span>Position<span class="token punctuation">)</span>
+
+<span class="token comment">-- Apply force at edge of part for spin effect</span>
+<span class="token keyword">local</span> spinForce <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">local</span> edgePos <span class="token operator">=</span> part<span class="token punctuation">.</span>Position <span class="token operator">+</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> part<span class="token punctuation">.</span>Size<span class="token punctuation">.</span>Y<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+PhysicsUtil<span class="token punctuation">.</span><span class="token function">ApplyForce</span><span class="token punctuation">(</span>part<span class="token punctuation">,</span> spinForce<span class="token punctuation">,</span> edgePos<span class="token punctuation">)</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="AcceleratePart"><code style="text-decoration:none">AcceleratePart</code><a href="#AcceleratePart" class="hash-link" aria-label="Direct link to AcceleratePart" title="Direct link to AcceleratePart">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/vadymcap/Mathf/blob/master/src/Mathf/PhysicsUtil.luau#L300"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PhysicsUtil<!-- -->.</code><code class="green_DgR4">AcceleratePart</code><code>(</code><div class="inset_uKQm"><div><code>part<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The part to accelerate</p>
+</span></span></div><div><code>emittingPart<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The part that emits/launches the other part (receives recoil)</p>
+</span></span></div><div><code>acceleration<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>Desired acceleration vector for the part</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Accelerates a part using Newton's third law (action-reaction).</p>
+<p><strong>Usage Notes:</strong></p>
+<ul>
+  <li>Applies equal and opposite forces to both parts</li>
+  <li>Useful for projectile systems and explosions</li>
+  <li>EmittingPart receives recoil force</li>
+  <li>Conserves momentum in the system</li>
+  <li>Force magnitude calculated from part mass and desired acceleration</li>
+</ul>
+<p><strong>Physics:</strong></p>
+<ul>
+  <li>Force = Mass × Acceleration</li>
+  <li>Action force on part, reaction force on emittingPart</li>
+  <li>Both parts affected by their respective connected assemblies</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class="language-lua"><code class="language-lua"><span class="token comment">-- Cannon firing system</span>
+<span class="token keyword">local</span> cannon <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Cannon<span class="token punctuation">.</span>Barrel
+<span class="token keyword">local</span> cannonball <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Cannonball
+<span class="token keyword">local</span> acceleration <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">500</span><span class="token punctuation">)</span> <span class="token comment">-- Fire forward</span>
+
+PhysicsUtil<span class="token punctuation">.</span><span class="token function">AcceleratePart</span><span class="token punctuation">(</span>cannonball<span class="token punctuation">,</span> cannon<span class="token punctuation">,</span> acceleration<span class="token punctuation">)</span>
+<span class="token comment">-- Cannonball flies forward, cannon recoils backward</span>
+
+<span class="token comment">-- Rocket propulsion</span>
+<span class="token keyword">local</span> rocket <span class="token operator">=</span> workspace<span class="token punctuation">.</span>Rocket
+<span class="token keyword">local</span> exhaustPart <span class="token operator">=</span> workspace<span class="token punctuation">.</span>ExhaustParticle
+<span class="token keyword">local</span> thrust <span class="token operator">=</span> Vector3<span class="token punctuation">.</span><span class="token function">new</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">-- Upward thrust</span>
+PhysicsUtil<span class="token punctuation">.</span><span class="token function">AcceleratePart</span><span class="token punctuation">(</span>exhaustPart<span class="token punctuation">,</span> rocket<span class="token punctuation">,</span> <span class="token operator">-</span>thrust<span class="token punctuation">)</span>
+</code></pre>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;SetWaterDensity&quot;,
+            &quot;desc&quot;: &quot;Standard water density constant used for buoyancy calculations.\n\n**Usage Notes:**\n- Default value: 1 (mass/volume)\n- Can be modified for different liquid densities\n- Used in EstimateBuoyancyContribution calculations\n- Real water density is ~1000 kg/m³, this is simplified for Roblox&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;newDensity&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 23,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetConnectedParts&quot;,
+            &quot;desc&quot;: &quot;Retrieves all connected parts of a part, including the part itself.\n\n**Usage Notes:**\n- Uses recursive connection detection\n- Includes the original part in returned array\n- Works with welded, hinged, and constraint-connected parts\n- Useful for calculating properties of entire assemblies\n\n**Example:**\n```lua\nlocal car = workspace.Vehicle.Chassis\nlocal allParts = PhysicsUtil.GetConnectedParts(car)\nprint(\&quot;Vehicle has\&quot;, #allParts, \&quot;parts\&quot;)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;part&quot;,
+                    &quot;desc&quot;: &quot;The part to get connections from&quot;,
+                    &quot;lua_type&quot;: &quot;BasePart&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Array containing all connected parts plus the original part&quot;,
+                    &quot;lua_type&quot;: &quot;{BasePart}&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 47,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;EstimateBuoyancyContribution&quot;,
+            &quot;desc&quot;: &quot;Estimates the total buoyancy force contributed by a collection of parts.\n\n**Usage Notes:**\n- Only CanCollide parts contribute to buoyancy displacement\n- Returns negative values if object would sink\n- Positive values indicate floating capability\n- Uses workspace gravity for calculations\n- Assumes parts are fully submerged\n\n**Example:**\n```lua\nlocal boat = workspace.Boat\nlocal parts = PhysicsUtil.GetConnectedParts(boat.Hull)\nlocal buoyancy, mass, volume = PhysicsUtil.EstimateBuoyancyContribution(parts)\n\nif buoyancy &gt; 0 then\n\tprint(\&quot;Boat will float!\&quot;)\nelse\n\tprint(\&quot;Boat will sink!\&quot;)\nend\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;parts&quot;,
+                    &quot;desc&quot;: &quot;Array of parts to calculate buoyancy for&quot;,
+                    &quot;lua_type&quot;: &quot;{BasePart}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Total buoyancy force (positive = float, negative = sink)&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;Total mass of all parts&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;Total volume of collidable parts&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 81,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetCenterOfMass&quot;,
+            &quot;desc&quot;: &quot;Calculates the world-space center of mass for a collection of parts.\n\n**Usage Notes:**\n- Returns weighted average position based on part masses\n- Essential for realistic physics simulation\n- Used as pivot point for rotational physics\n- More accurate than using geometric center\n- Works with any collection of parts\n\n**Example:**\n```lua\nlocal vehicle = workspace.Car\nlocal parts = PhysicsUtil.GetConnectedParts(vehicle.Chassis)\nlocal centerOfMass, totalMass = PhysicsUtil.GetCenterOfMass(parts)\n\n-- Visualize center of mass\nlocal sphere = Instance.new(\&quot;Part\&quot;)\nsphere.Shape = Enum.PartType.Ball\nsphere.Size = Vector3.new(1, 1, 1)\nsphere.Position = centerOfMass\nsphere.Anchored = true\nsphere.Parent = workspace\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;parts&quot;,
+                    &quot;desc&quot;: &quot;Array of parts to calculate center of mass for&quot;,
+                    &quot;lua_type&quot;: &quot;{BasePart}&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;World position of center of mass&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;Total mass of all parts&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 130,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;MomentOfInertia&quot;,
+            &quot;desc&quot;: &quot;Calculates the moment of inertia of a cuboid part around a given axis.\n\n**Usage Notes:**\n- Moment of inertia represents resistance to rotational acceleration\n- Higher values mean harder to rotate\n- Takes into account both part shape and position relative to axis\n- Uses parallel axis theorem for offset calculation\n- Essential for realistic torque simulation\n\n**Example:**\n```lua\nlocal part = workspace.Wheel\nlocal axis = Vector3.new(0, 1, 0) -- Rotation around Y axis\nlocal origin = part.Position\nlocal inertia = PhysicsUtil.MomentOfInertia(part, axis, origin)\nprint(\&quot;Rotational inertia:\&quot;, inertia)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;part&quot;,
+                    &quot;desc&quot;: &quot;The part to calculate inertia for&quot;,
+                    &quot;lua_type&quot;: &quot;BasePart&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;axis&quot;,
+                    &quot;desc&quot;: &quot;Axis of rotation (does not need to be unit vector)&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;origin&quot;,
+                    &quot;desc&quot;: &quot;Origin point of the rotation axis&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Moment of inertia around the specified axis&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 166,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;BodyMomentOfInertia&quot;,
+            &quot;desc&quot;: &quot;Calculates the total moment of inertia for a connected body of parts.\n\n**Usage Notes:**\n- Sums individual part inertias for entire assembly\n- Axis should be the torque vector or (offset × force)\n- Origin should be the center of mass of the assembly\n- Used for calculating angular acceleration from torque\n- Essential for multi-part physics simulation\n\n**Example:**\n```lua\nlocal robot = workspace.Robot\nlocal parts = PhysicsUtil.GetConnectedParts(robot.Torso)\nlocal com, mass = PhysicsUtil.GetCenterOfMass(parts)\nlocal torque = Vector3.new(0, 100, 0) -- Spin torque\nlocal inertia = PhysicsUtil.BodyMomentOfInertia(parts, torque, com)\nlocal angularAccel = torque / inertia\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;parts&quot;,
+                    &quot;desc&quot;: &quot;Array of connected parts&quot;,
+                    &quot;lua_type&quot;: &quot;{BasePart}&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;axis&quot;,
+                    &quot;desc&quot;: &quot;Rotation axis (typically torque vector)&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;origin&quot;,
+                    &quot;desc&quot;: &quot;Origin of rotation (typically center of mass)&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Total moment of inertia for the entire body&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 203,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;ApplyForce&quot;,
+            &quot;desc&quot;: &quot;Applies a force to a Roblox physics body at a specific position.\n\n**Usage Notes:**\n- Automatically calculates both linear and angular acceleration\n- Uses Newton&#x27;s laws and rotational dynamics\n- Works on entire connected assembly, not just one part\n- Force position determines torque magnitude and direction\n- Modifies both Velocity and RotVelocity properties\n- Setting velocity on one part affects entire connected body in Roblox\n\n**Physics Details:**\n- Linear acceleration = Force / Mass\n- Torque = Offset × Force\n- Angular acceleration = Torque / Moment of Inertia\n\n**Example:**\n```lua\n-- Apply explosion force to a part\nlocal part = workspace.Crate\nlocal explosionPos = Vector3.new(0, 5, 0)\nlocal force = (part.Position - explosionPos).Unit * 1000\nPhysicsUtil.ApplyForce(part, force, part.Position)\n\n-- Apply force at edge of part for spin effect\nlocal spinForce = Vector3.new(100, 0, 0)\nlocal edgePos = part.Position + Vector3.new(0, part.Size.Y/2, 0)\nPhysicsUtil.ApplyForce(part, spinForce, edgePos)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;part&quot;,
+                    &quot;desc&quot;: &quot;The part to apply force to (can be any part in assembly)&quot;,
+                    &quot;lua_type&quot;: &quot;BasePart&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;force&quot;,
+                    &quot;desc&quot;: &quot;Force vector to apply (in studs * mass / second²)&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;forcePosition&quot;,
+                    &quot;desc&quot;: &quot;World position where force is applied (defaults to part.Position)&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3?&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 247,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;AcceleratePart&quot;,
+            &quot;desc&quot;: &quot;Accelerates a part using Newton&#x27;s third law (action-reaction).\n\n**Usage Notes:**\n- Applies equal and opposite forces to both parts\n- Useful for projectile systems and explosions\n- EmittingPart receives recoil force\n- Conserves momentum in the system\n- Force magnitude calculated from part mass and desired acceleration\n\n**Physics:**\n- Force = Mass × Acceleration\n- Action force on part, reaction force on emittingPart\n- Both parts affected by their respective connected assemblies\n\n**Example:**\n```lua\n-- Cannon firing system\nlocal cannon = workspace.Cannon.Barrel\nlocal cannonball = workspace.Cannonball\nlocal acceleration = Vector3.new(0, 0, -500) -- Fire forward\n\nPhysicsUtil.AcceleratePart(cannonball, cannon, acceleration)\n-- Cannonball flies forward, cannon recoils backward\n\n-- Rocket propulsion\nlocal rocket = workspace.Rocket\nlocal exhaustPart = workspace.ExhaustParticle\nlocal thrust = Vector3.new(0, 1000, 0) -- Upward thrust\nPhysicsUtil.AcceleratePart(exhaustPart, rocket, -thrust)\n```&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;part&quot;,
+                    &quot;desc&quot;: &quot;The part to accelerate&quot;,
+                    &quot;lua_type&quot;: &quot;BasePart&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;emittingPart&quot;,
+                    &quot;desc&quot;: &quot;The part that emits/launches the other part (receives recoil)&quot;,
+                    &quot;lua_type&quot;: &quot;BasePart&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;acceleration&quot;,
+                    &quot;desc&quot;: &quot;Desired acceleration vector for the part&quot;,
+                    &quot;lua_type&quot;: &quot;Vector3&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 300,
+                &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [],
+    &quot;name&quot;: &quot;PhysicsUtil&quot;,
+    &quot;desc&quot;: &quot;&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 8,
+        &quot;path&quot;: &quot;src/Mathf/PhysicsUtil.luau&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#AcceleratePart" class="table-of-contents__link toc-highlight">.AcceleratePart</a></li><li><a href="#ApplyForce" class="table-of-contents__link toc-highlight">.ApplyForce</a></li><li><a href="#BodyMomentOfInertia" class="table-of-contents__link toc-highlight">.BodyMomentOfInertia</a></li><li><a href="#EstimateBuoyancyContribution" class="table-of-contents__link toc-highlight">.EstimateBuoyancyContribution</a></li><li><a href="#GetCenterOfMass" class="table-of-contents__link toc-highlight">.GetCenterOfMass</a></li><li><a href="#GetConnectedParts" class="table-of-contents__link toc-highlight">.GetConnectedParts</a></li><li><a href="#MomentOfInertia" class="table-of-contents__link toc-highlight">.MomentOfInertia</a></li><li><a href="#SetWaterDensity" class="table-of-contents__link toc-highlight">.SetWaterDensity</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 vadymcap. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
