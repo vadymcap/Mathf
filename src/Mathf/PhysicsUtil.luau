@@ -18,11 +18,11 @@ local PhysicsUtil = {}
 	- Used in EstimateBuoyancyContribution calculations
 	- Real water density is ~1000 kg/m³, this is simplified for Roblox
 
-	**Example:**
-	```lua
-	PhysicsUtil.WATER_DENSITY = 1.5 -- Denser liquid
-	```
+	@param newDensity number
 ]=]
+function PhysicsUtil.SetWaterDensity(newDensity:number)
+	PhysicsUtil.WATER_DENSITY = newDensity
+end
 PhysicsUtil.WATER_DENSITY = 1 -- (mass/volume)
 
 --[=[
