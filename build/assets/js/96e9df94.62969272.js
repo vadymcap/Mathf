@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[753],{4410:s=>{s.exports=JSON.parse('{"sourceUrl":"https://github.com/vadymcap/Mathf/blob/master","baseUrl":"/Mathf/","classOrder":[],"apiCategories":[]}')}}]);
