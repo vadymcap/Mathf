@@ -313,4 +313,5 @@ function ExperienceCalculator.GenerateLevelTable(startLevel: number, endLevel: n
 	return levelTable
 end
 
+export type ExperienceCalculator = typeof(ExperienceCalculator)
 return ExperienceCalculator
